@@ -16,6 +16,8 @@
     "handlebones": "0.0.2"
   },
   "browserify": {
-    "transform": [ "hbsfy" ]
+    "transform": [
+      "hbsfy"
+    ]
   }
 }
