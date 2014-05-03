@@ -1,15 +1,16 @@
 var Backbone = require('backbone');
+var Handlebones = require('handlebones/handlebones');
 
 var helloTemplate = require('templates/hello.hbs');
 
 var WelcomeView = require('views/welcome');
 
-var Hello = Backbone.View.extend({
+var Hello = Handlebones.View.extend({
 
   template: helloTemplate,
 
   render: function() {
-    this.$el.html(this.template({welcome: this.welcome}));
+    this.$el.html(this.template(this));
     return this;
   },
 
