@@ -17,7 +17,7 @@ Handlebars.registerHelper("view", function (view) {
     htmlAttributes[viewPlaceholderAttributeName] = view.cid;
     var output = "stub"; // Handlebones.Util.tag(htmlAttributes, "", this);
     return new Handlebars.SafeString(output);
-  });
+});
 
 var HelloView = require('views/hello');
 
@@ -65,7 +65,7 @@ var Hello = Backbone.View.extend({
   template: helloTemplate,
 
   render: function() {
-    this.$el.html(this.template());
+    this.$el.html(this.template({welcome: this.welcome}));
     return this;
   },
 

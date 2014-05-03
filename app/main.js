@@ -16,7 +16,7 @@ Handlebars.registerHelper("view", function (view) {
     htmlAttributes[viewPlaceholderAttributeName] = view.cid;
     var output = "stub"; // Handlebones.Util.tag(htmlAttributes, "", this);
     return new Handlebars.SafeString(output);
-  });
+});
 
 var HelloView = require('views/hello');
 

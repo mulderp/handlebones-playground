@@ -9,7 +9,7 @@ var Hello = Backbone.View.extend({
   template: helloTemplate,
 
   render: function() {
-    this.$el.html(this.template());
+    this.$el.html(this.template({welcome: this.welcome}));
     return this;
   },
 
